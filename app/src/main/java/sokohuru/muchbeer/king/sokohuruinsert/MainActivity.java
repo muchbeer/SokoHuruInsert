@@ -111,7 +111,10 @@ public class MainActivity extends ActionBarActivity {
                 Log.d(TAG, "Register Response: " + response.toString());
                 hideDialog();
 
-
+                itemEt.setText("");
+                priceEt.setText("");
+                Intent suceedIntent = new Intent(MainActivity.this, SuccesActivity.class);
+                startActivity(suceedIntent);
              Toast.makeText(getApplicationContext(),"Muchbeer you made it", Toast.LENGTH_LONG).show();
 
                 try {
