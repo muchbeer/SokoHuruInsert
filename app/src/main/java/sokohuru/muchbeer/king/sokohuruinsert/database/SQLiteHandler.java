@@ -46,7 +46,6 @@ public class SQLiteHandler extends SQLiteOpenHelper {
 				+ KEY_ID + " INTEGER PRIMARY KEY," +
 				KEY_NAME + " TEXT," +
 				KEY_PRICE + " TEXT ," +
-				KEY_UID + " TEXT," 	+
 				KEY_CREATED_AT + " TEXT" + ")";
 
 		db.execSQL(CREATE_LOGIN_TABLE);
@@ -67,13 +66,13 @@ public class SQLiteHandler extends SQLiteOpenHelper {
 	/**
 	 * Storing user details in database
 	 * */
-	public void addUser(String name, String price, String uid, String created_at) {
+	public void addUser(String name, String price, String created_at) {
 		SQLiteDatabase db = this.getWritableDatabase();
 
 		ContentValues values = new ContentValues();
 		values.put(KEY_NAME, name); // Name
 		values.put(KEY_PRICE, price); // Price
-		values.put(KEY_UID, uid); // Email
+		 // Email
 		values.put(KEY_CREATED_AT, created_at); // Created At
 
 		// Inserting Row

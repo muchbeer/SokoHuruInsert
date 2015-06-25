@@ -9,8 +9,8 @@ package sokohuru.muchbeer.king.sokohuruinsert.connectdata;
 public class Contacts {
 
     //private variables
-    int User_Id;
-    String item;
+    int uid;
+    String name;
     String price;
 
     //Empty Constructor
@@ -19,37 +19,37 @@ public class Contacts {
     }
 
     //constructor
-    public Contacts(int User_Id, String item, String price) {
-        this.User_Id = User_Id;
-        this.item=item;
+    public Contacts(int uid, String name, String price) {
+        this.uid = uid;
+        this.name=name;
         this.price=price;
     }
 
     //constructor
-    public Contacts(String item , String price) {
-        this.item=item;
+    public Contacts(String name , String price) {
+        this.name=name;
         this.price=price;
 
     }
 
     //getting ID
-    public int getUser_Id() {
-        return  this.User_Id;
+    public int getUid() {
+        return  this.uid;
     }
 
     //setting id
-    public void setUser_Id(int User_Id) {
-        this.User_Id = User_Id;
+    public void setUid(int uid) {
+        this.uid = uid;
     }
 
     //getting name
-    public String getItem() {
-        return this.item;
+    public String getName() {
+        return this.name;
     }
 
     //setting name
-    public void setItem(String item) {
-        this.item=item;
+    public void setName(String name) {
+        this.name=name;
     }
 
     //getting price

@@ -86,7 +86,7 @@ public class MainActivity extends ActionBarActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
-               Toast.makeText(getApplicationContext(),"Amazing feature coming soon", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Amazing feature coming soon", Toast.LENGTH_LONG).show();
             }
         });
 
@@ -111,6 +111,9 @@ public class MainActivity extends ActionBarActivity {
                 Log.d(TAG, "Register Response: " + response.toString());
                 hideDialog();
 
+
+             Toast.makeText(getApplicationContext(),"Muchbeer you made it", Toast.LENGTH_LONG).show();
+
                 try {
                     JSONObject jObj = new JSONObject(response);
                     boolean error = jObj.getBoolean("error");
@@ -126,12 +129,9 @@ public class MainActivity extends ActionBarActivity {
                                 .getString("created_at");
 
                         // Inserting row in users table
-                        db.addUser(name, price, uid, created_at);
+                        db.addUser(name, price, created_at);
 
-                        // Launch login activity
-                        Intent intent = new Intent(
-                                MainActivity.this, SuccesActivity.class);
-                        startActivity(intent);
+
                         finish();
                     } else {
 
@@ -151,7 +151,7 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Log.e(TAG, "Registration Error: " + error.getMessage());
-                Toast.makeText(getApplicationContext(),
+                Toast.makeText(getApplicationContext(), "I am close " +
                         error.getMessage(), Toast.LENGTH_LONG).show();
                 hideDialog();
             }
