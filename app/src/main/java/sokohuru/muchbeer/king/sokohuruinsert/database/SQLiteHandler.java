@@ -66,14 +66,14 @@ public class SQLiteHandler extends SQLiteOpenHelper {
 	/**
 	 * Storing user details in database
 	 * */
-	public void addUser(String name, String price, String created_at) {
+	public void addUser(String name, String price) {
 		SQLiteDatabase db = this.getWritableDatabase();
 
 		ContentValues values = new ContentValues();
 		values.put(KEY_NAME, name); // Name
 		values.put(KEY_PRICE, price); // Price
 		 // Email
-		values.put(KEY_CREATED_AT, created_at); // Created At
+		//values.put(KEY_CREATED_AT, created_at); // Created At
 
 		// Inserting Row
 		long id = db.insert(TABLE_LOGIN, null, values);

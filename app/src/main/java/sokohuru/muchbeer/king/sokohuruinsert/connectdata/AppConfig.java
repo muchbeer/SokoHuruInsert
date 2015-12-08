@@ -10,4 +10,6 @@ public class AppConfig {
 
     // Server user register url
     public static String URL_REGISTER = "http://sokouhuru.com/take_order.php";
+
+    public static String URL_RETRIEVE = "http://sokouhuru.com/get_order.php";
 }

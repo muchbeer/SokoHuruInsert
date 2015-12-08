@@ -128,11 +128,9 @@ public class MainActivity extends ActionBarActivity {
                         JSONObject user = jObj.getJSONObject("user");
                         String name = user.getString("name");
                         String price = user.getString("price");
-                        String created_at = user
-                                .getString("created_at");
 
                         // Inserting row in users table
-                        db.addUser(name, price, created_at);
+                        db.addUser(name, price);
 
 
                         finish();
